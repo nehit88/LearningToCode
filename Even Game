@@ -1,0 +1,48 @@
+def even_game_input():
+    
+    trial = "X"
+    
+    while type(trial) != float:
+        
+        trial = input("Type in an even number to win: ")
+        
+        try:
+            trial = float(trial)
+            
+        except ValueError:
+            print("Please enter a number!")
+    
+    return float(trial)
+    
+    def even_check(trial):
+    
+    if trial % 2 == 0:
+        
+        print("YOU WIN!")
+        
+    else:
+        
+        print("YOU LOSE :(")
+        
+        def play_again():
+    
+    decision = input("Wanna play again? (Y to play): ")
+    
+    if decision == 'Y':
+        return True
+    
+    else:
+        return False
+    
+    from IPython.display import clear_output
+
+game_on = True
+
+while game_on:
+    
+    user_input = even_game_input()
+    even_check(user_input)
+    game_on = play_again()
+    clear_output()
+
+print("Thank you for playing! :D")
